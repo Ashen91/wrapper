@@ -20,16 +20,26 @@ Tested on MacOS arm64.
 nano .env
 ```
 
-## Usage
+2. Create an external docker volume
 
 ```
-docker compose up -d
+docker volume create rootfs
 ```
-If you get an error that repository doesn't exist, try:
+
+## Usage
+
+Build:
 
 ```
 docker build --tag wrapper .
 ```
+
+Launch:
+
+```
+docker compose up -d
+```
+
 
 ## Stop
 
