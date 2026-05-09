@@ -40,6 +40,13 @@ Launch:
 docker compose up -d
 ```
 
+(First time only) If your Apple ID has Two-Factor Authentication (2FA) enabled, you need to provide the verification code:
+
+```
+docker exec -it wrapper sh -c 'echo -n XXXXXX > /app/rootfs/data/data/com.apple.android.music/files/2fa.txt'
+```
+
+Replace XXXXXX with the 6-digit verification code sent to your device.
 
 ## Stop
 
